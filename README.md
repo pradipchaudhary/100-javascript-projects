@@ -7,6 +7,9 @@ This repository contains a collection of various Vanilla JavaScript projects. Ea
 [![Logo](./assets/images/thumbnail.jpg)](https://100jsproject.vercel.app/)
 
 <!-- ![Screenshot](banner.jpg) -->
+## Introduction
+
+This repository contains 100 JavaScript projects, each focusing on specific concepts, libraries, or frameworks. Whether you're a beginner looking to practice your skills or an experienced developer seeking new challenges, you'll find a variety of projects to explore.
 
 Feel free to explore each project in detail by navigating to their respective folders. Each project contains its own set of files and instructions on how to run or integrate them.
 
