@@ -1,29 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Currency Converter || 100 JavaScript Projects</title>
-        <!-- style -->
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
-        <div id="converter">
-            <h2>Currency Converter</h2>
-            <input type="number" id="amount" placeholder="Enter amount" />
-            <select id="fromCurrency">
-                <!-- Add currency options here -->
-            </select>
-            <span>to</span>
-            <select id="toCurrency">
-                <!-- Add currency options here -->
-            </select>
-            <br />
-            <button onclick="convertCurrency()">Convert</button>
-            <h3>Result: <span id="result"></span></h3>
-        </div>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Currency Converter</title>
+      <link rel="stylesheet" href="styles.css" />
+   </head>
+   <body>
+      <div id="converter">
+         <h2>Currency Converter</h2>
+         <input type="number" id="amount" placeholder="Enter amount" />
+         <select id="fromCurrency"></select>
+         <select id="toCurrency"></select>
+         <button onclick="convert()">Convert</button>
+         <div id="result"></div>
+         <div id="error"></div>
+      </div>
 
-        <!-- javascript includes -->
-        <script src="index.js"></script>
-    </body>
+      <script src="script.js"></script>
+   </body>
 </html>
