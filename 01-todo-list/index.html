@@ -3,35 +3,19 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-            name="description"
-            content="A simple and effective to-do list app to help you manage tasks and stay organized."
-        />
-        <meta
-            name="keywords"
-            content="to-do, task manager, productivity, task list, app, JavaScript, web app"
-        />
-        <meta name="author" content="Pradip Chaudhary" />
-
-        <title>To-Do App | 100 JavaScript Projects</title>
+        <title>Todo List</title>
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
         <div class="container">
-            <h1 class="title">Todo List</h1>
-            <form id="todo-form" autocomplete="off">
-                <input
-                    type="text"
-                    id="new-task"
-                    name="task"
-                    placeholder="Add a new task..."
-                    aria-label="Add a new task"
-                    required
-                />
-                <button type="submit">Add</button>
-            </form>
-            <ul id="task-list" aria-live="polite"></ul>
+            <h1>Todo List</h1>
+            <div class="input-group">
+                <input type="text" id="todo-input" placeholder="Enter Task" />
+                <button type="submit" onclick="addTodo()">Add</button>
+            </div>
+            <ul id="todo-list"></ul>
         </div>
-        <script src="script.js" defer></script>
+        <!-- Script  -->
+        <script src="index.js"></script>
     </body>
 </html>
