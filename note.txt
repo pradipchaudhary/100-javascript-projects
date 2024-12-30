@@ -1,0 +1,4 @@
+
+
+- Project thumbnail size 
+    320 x 183

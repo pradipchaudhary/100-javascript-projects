@@ -1,0 +1,61 @@
+/* Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* Browser reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    /* font-family: "Arial", sans-serif; */
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #ffffff;
+}
+#calculator {
+    border: 1px solid #b5b5b5;
+    background-color: #f4f4f4;
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 8px 5px;
+}
+#display {
+    height: 80px;
+    text-align: right;
+    font-size: 1.5em;
+    padding: 5px 5px;
+    background: #fff;
+    border: 1px solid #b5b5b5;
+    margin: 5px;
+    overflow: hidden;
+    border-radius: 2px;
+}
+#keyboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+button {
+    width: 60px;
+    height: 60px;
+    font-size: 1.3em;
+    padding: 14px;
+    cursor: pointer;
+    outline: none;
+    background: #fff;
+    margin: 5px;
+    border: 1px solid #b5b5b5;
+    font-weight: 600;
+    border-radius: 5px;
+}
+button:active {
+    background-color: #ccc;
+}
+button.operator {
+    background-color: #ff8c00;
+    color: #fff;
+}

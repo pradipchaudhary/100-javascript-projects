@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-.vscode/
-.vite
-node_modules
-=======
+
+
 # Logs
 logs
 *.log
@@ -27,4 +24,5 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
->>>>>>> a0fe8cabb5fa74d098aa8a311919b10f4f107ce1
+.vscode/
+.vite
