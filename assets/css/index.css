@@ -34,7 +34,8 @@ html {
     height: 310px;
     width: 310px;
     border-radius: 50%;
-    background-color: #d9007b; /* Fuchsia Color */
+    background-color: #d9007b;
+    /* Fuchsia Color */
     opacity: 0.1;
     filter: blur(100px);
 }
@@ -52,8 +53,10 @@ html {
 /* Content Container Styling */
 .content-container {
     position: relative;
-    z-index: 1; /* Ensures content appears above the background */
-    color: #333; /* Text color */
+    z-index: 1;
+    /* Ensures content appears above the background */
+    color: #333;
+    /* Text color */
     width: 100%;
     height: 100%;
 }
@@ -73,19 +76,24 @@ html {
 .header .brand-name {
     font-weight: 600;
 }
+
 .brand-name a {
-    font-size: 1.6rem; /* Adjust size as needed */
+    font-size: 1.6rem;
+    /* Adjust size as needed */
     font-weight: bold;
     text-decoration: none;
-    background: linear-gradient(
-        to right,
-        #d9007b,
-        #ff4e8c
-    ); /* Gradient using #d9007b and a complementary pink */
-    -webkit-background-clip: text; /* Clip background to text for Webkit browsers */
-    -webkit-text-fill-color: transparent; /* Make text fill transparent for Webkit browsers */
-    background-clip: text; /* Standard property for other browsers */
-    text-fill-color: transparent; /* Ensure transparency works in modern browsers */
+    background: linear-gradient(to right,
+            #d9007b,
+            #ff4e8c);
+    /* Gradient using #d9007b and a complementary pink */
+    -webkit-background-clip: text;
+    /* Clip background to text for Webkit browsers */
+    -webkit-text-fill-color: transparent;
+    /* Make text fill transparent for Webkit browsers */
+    background-clip: text;
+    /* Standard property for other browsers */
+    text-fill-color: transparent;
+    /* Ensure transparency works in modern browsers */
 }
 
 /* Header Navigation Styling */
@@ -113,6 +121,7 @@ html {
     font-size: 14px !important;
     font-weight: 500 !important;
 }
+
 /* Hero Section Styling */
 #hero {
     width: 100%;
@@ -131,7 +140,8 @@ html {
     padding: 6px 12px;
     border-radius: 9999px;
     background-color: white;
-    color: #64748b; /* Slate color */
+    color: #64748b;
+    /* Slate color */
     font-size: 12px;
     font-weight: 500;
     line-height: 1.25;
@@ -143,7 +153,8 @@ html {
 }
 
 .custom-snippet:hover {
-    background-color: #f1f5f9; /* Lighter shade on hover */
+    background-color: #f1f5f9;
+    /* Lighter shade on hover */
 }
 
 /* Read More Link Styling */
@@ -170,6 +181,7 @@ html {
     margin: 0 auto;
     margin-bottom: 0.75rem;
 }
+
 .hero h1.title span {
     color: #262f44;
 }
@@ -298,7 +310,8 @@ html {
     margin: 2px;
     padding: 2px 7px;
     font-size: 0.68rem;
-    background-color: #f2f2f2; /* Fuchsia Color */
+    background-color: #f2f2f2;
+    /* Fuchsia Color */
     color: #242424;
 }
 
@@ -332,18 +345,27 @@ html {
 }
 
 /* Add some padding and space between the content inside each card */
-.project-card > p,
-.project-card > a {
+.project-card>p,
+.project-card>a {
     margin-bottom: 10px;
 }
 
 /* Footer Section Styling */
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 3rem 0;
-    color: #333; /* Text color */
-    background-color: #111827;
+/* CSS */
+.custom-footer {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    padding: 40px 0;
+    /* background-color: #f9f9f9; */
+    /* border-top: 1px solid #e5e5e5; */
+}
+
+.custom-footer a {
+    color: #007acc;
+    text-decoration: none;
+}
+
+.custom-footer a:hover {
+    text-decoration: underline;
 }
