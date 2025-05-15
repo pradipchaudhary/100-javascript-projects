@@ -1,3 +1,0 @@
-# Lazy Loading Images :art:
-
-loading...
