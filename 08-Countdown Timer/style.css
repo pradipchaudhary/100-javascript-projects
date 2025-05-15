@@ -1,0 +1,22 @@
+body {
+    font-family: "Arial", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.timer-container {
+    text-align: center;
+}
+
+#timer {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+button {
+    font-size: 1em;
+    margin: 5px;
+}

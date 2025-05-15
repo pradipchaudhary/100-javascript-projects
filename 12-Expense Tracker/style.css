@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+:root {
+    --primary: #3a3a3a;
+    --primary-dark: #302d2d;
+    --green: #008104;
+    --red: #ff0000;
+    --bg-color: #ecf0f1;
+    --white: #fff;
+    --dark: #212121;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.box {
+    width: 450px;
+    height: 100vh;
+    padding: 20px;
+    background-color: var(--white);
+    color: var(--dark);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+p {
+    font-size: 14px;
+}
+h1 {
+    font-weight: 500;
+    font-size: 32px;
+}
+h2 {
+    font-weight: 400;
+    font-size: 24px;
+}
+h3 {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.box_upper,
+.balance {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.balance {
+    margin-top: 20px;
+}
+
+.transaction_container {
+    margin-top: 20px;
+    width: 100%;
+    height: 55%;
+}
+
+.transactions {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    /* overflow-y: scroll; */
+}
+.transaction {
+    background-color: white;
+    color: black;
+    display: flex;
+    /* flex-direction: column; */
+}
+.transaction .left {
+    padding: 7px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content {
+    display: flex;
+}
+.lower {
+    padding: 10px;
+    gap: 10px;
+    display: none;
+}
+.lower img {
+    height: 20px;
+}
+.showTransaction {
+    display: flex;
+}
+.status {
+    display: grid;
+    place-items: center;
+    color: white;
+    min-height: 40px;
+    min-width: 40px;
+}
+.credit {
+    background-color: var(--green);
+}
+.debit {
+    background-color: var(--red);
+}
+
+.transaction_form {
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: black;
+    padding: 20px;
+}
+.transaction_form h3 {
+    margin-bottom: 10px;
+}
+
+.form_control {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.form_control:first-child {
+    flex: 2;
+}
+.inputs {
+    display: flex;
+    gap: 10px;
+}
+form input {
+    padding: 10px 15px;
+    outline: 1px solid transparent;
+    border: 1px solid black;
+    width: 100%;
+}
+form input:focus-visible {
+    outline: 1px solid var(--primary-dark);
+    border: 1px solid var(--primary-dark);
+}
+
+.buttons_container {
+    display: flex;
+    margin-top: 10px;
+}
+.buttons_container button {
+    width: 100%;
+    height: 45px;
+    color: white;
+    border: none;
+    opacity: 0.9;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.buttons_container button:hover {
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+}
+
+#earnBtn {
+    background-color: var(--green);
+}
+#expBtn {
+    background-color: var(--red);
+}
+
+@media (max-width: 500px) {
+    .box {
+        width: 95%;
+    }
+}

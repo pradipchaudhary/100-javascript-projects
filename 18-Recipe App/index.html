@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Recipe App || 100 JavaScript Projects</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                margin: 0;
+            }
+
+            h1 {
+                margin-bottom: 20px;
+            }
+
+            #recipe-list {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .recipe {
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                padding: 10px;
+                margin-bottom: 10px;
+                cursor: pointer;
+            }
+
+            .recipe:hover {
+                background-color: #f9f9f9;
+            }
+
+            #recipe-details {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Recipe App</h1>
+        <ul id="recipe-list"></ul>
+        <div id="recipe-details">
+            <h2 id="recipe-title"></h2>
+            <p id="recipe-description"></p>
+            <button onclick="closeDetails()">Close</button>
+        </div>
+
+        <script>
+            const recipes = [
+                {
+                    title: "Pasta Carbonara",
+                    description:
+                        "Delicious pasta with eggs, cheese, pancetta, and black pepper.",
+                },
+                {
+                    title: "Chicken Alfredo",
+                    description:
+                        "Creamy pasta dish with grilled chicken, Alfredo sauce, and Parmesan cheese.",
+                },
+                {
+                    title: "Vegetable Stir-Fry",
+                    description:
+                        "Healthy stir-fried vegetables with tofu and soy sauce.",
+                },
+                // Add more recipes as needed
+            ];
+
+            const recipeList = document.getElementById("recipe-list");
+            const recipeDetails = document.getElementById("recipe-details");
+            const recipeTitle = document.getElementById("recipe-title");
+            const recipeDescription =
+                document.getElementById("recipe-description");
+
+            // Display recipe list
+            recipes.forEach((recipe, index) => {
+                const listItem = document.createElement("li");
+                listItem.classList.add("recipe");
+                listItem.textContent = recipe.title;
+                listItem.addEventListener("click", () => showDetails(index));
+                recipeList.appendChild(listItem);
+            });
+
+            function showDetails(index) {
+                const selectedRecipe = recipes[index];
+                recipeTitle.textContent = selectedRecipe.title;
+                recipeDescription.textContent = selectedRecipe.description;
+                recipeDetails.style.display = "block";
+            }
+
+            function closeDetails() {
+                recipeDetails.style.display = "none";
+            }
+        </script>
+    </body>
+</html>

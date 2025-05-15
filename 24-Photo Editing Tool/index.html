@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Photo Editing Tool || 100 JavaScript Projects</title>
+    </head>
+    <body>
+        <input type="file" id="imageInput" accept="image/*" />
+        <canvas id="canvas"></canvas>
+        <button onclick="applyFilter('grayscale')">Grayscale</button>
+        <button onclick="applyFilter('sepia')">Sepia</button>
+        <button onclick="applyFilter('invert')">Invert</button>
+        <button onclick="resetImage()">Reset</button>
+        <button onclick="downloadImage()">Download</button>
+
+        <script src="script.js"></script>
+    </body>
+</html>

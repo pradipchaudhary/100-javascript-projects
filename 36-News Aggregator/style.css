@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+#news-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.article {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.article h2 {
+    margin-bottom: 5px;
+}
+
+.article p {
+    margin: 0;
+}

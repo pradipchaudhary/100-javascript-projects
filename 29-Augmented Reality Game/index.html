@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AR Game</title>
+        <style>
+            /* Add your custom CSS styles here */
+        </style>
+    </head>
+    <body>
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+        <script>
+            AFRAME.registerComponent("game", {
+                init: function () {
+                    // Add your game logic here
+                    // For simplicity, let's create a box that can be clicked
+                    this.el.addEventListener("click", this.onClick.bind(this));
+                },
+                onClick: function () {
+                    // Handle click event, e.g., increment score
+                    console.log("Box clicked!");
+                },
+            });
+        </script>
+
+        <a-scene>
+            <!-- AR camera setup -->
+            <a-marker preset="hiro">
+                <a-box
+                    position="0 0.5 0"
+                    rotation="0 45 0"
+                    color="red"
+                    game
+                ></a-box>
+            </a-marker>
+
+            <!-- Include any 3D models, textures, or other assets here -->
+        </a-scene>
+    </body>
+</html>

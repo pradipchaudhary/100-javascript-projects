@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+#cryptoList {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.crypto {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.crypto h3 {
+    color: #333;
+}
+
+.crypto p {
+    color: #666;
+}

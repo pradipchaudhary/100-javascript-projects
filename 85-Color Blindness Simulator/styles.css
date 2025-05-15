@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#app {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#simulatedColors {
+    margin-top: 20px;
+}
+
+.simulatedColor {
+    display: inline-block;
+    margin: 10px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    font-size: 16px;
+}

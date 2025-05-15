@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+#blogPosts {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.post {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.post h2 {
+    color: #333;
+}
+
+.post p {
+    color: #666;
+}

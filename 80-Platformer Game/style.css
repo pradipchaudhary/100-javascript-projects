@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #87ceeb;
+}
+
+#game-container {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    margin: 20px auto;
+    border: 1px solid #000;
+}
+
+.platform {
+    position: absolute;
+    background-color: #2e8b57;
+    height: 20px;
+    border-radius: 5px;
+}
+
+#player {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #ff6347;
+    border-radius: 50%;
+    bottom: 0;
+    left: 50px;
+}

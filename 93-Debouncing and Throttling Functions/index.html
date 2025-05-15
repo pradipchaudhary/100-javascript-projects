@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Debouncing and Throttling Web App</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <main>
+            <h1>Debouncing and Throttling Web App</h1>
+
+            <label for="delaySlider"
+                >Delay: <span id="delayValue">500</span>ms</label
+            >
+            <input
+                type="range"
+                id="delaySlider"
+                min="100"
+                max="1000"
+                step="100"
+                value="500"
+            />
+
+            <input type="text" id="textInput" placeholder="Type something..." />
+
+            <div class="result">
+                <h2>Result:</h2>
+                <pre id="resultContent"></pre>
+            </div>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>

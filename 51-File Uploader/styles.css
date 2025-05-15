@@ -1,0 +1,25 @@
+body {
+    font-family: "Arial", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+input {
+    margin: 10px 0;
+}
+
+progress {
+    width: 100%;
+    margin: 10px 0;
+}
+
+#status {
+    margin: 10px 0;
+}

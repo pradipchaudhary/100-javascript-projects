@@ -1,0 +1,15 @@
+body {
+    font-family: "Arial", sans-serif;
+}
+
+.chart-container {
+    height: 300px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.metric-container {
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}

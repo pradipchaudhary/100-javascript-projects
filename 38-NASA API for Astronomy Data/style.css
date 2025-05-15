@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    text-align: center;
+}
+
+#apod-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+#apod-image {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+#apod-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#apod-explanation {
+    margin-bottom: 20px;
+}
+
+#load-apod-button {
+    padding: 10px;
+    cursor: pointer;
+}

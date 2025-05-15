@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Color Blindness Simulator</title>
+    </head>
+    <body>
+        <div id="app">
+            <h1>Color Blindness Simulator</h1>
+            <label for="colorPicker">Choose a Color:</label>
+            <input type="color" id="colorPicker" value="#ff0000" />
+            <div id="simulatedColors">
+                <p>Simulated Colors:</p>
+                <div id="protanopia" class="simulatedColor">Protanopia</div>
+                <div id="deuteranopia" class="simulatedColor">Deuteranopia</div>
+                <div id="tritanopia" class="simulatedColor">Tritanopia</div>
+            </div>
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+</html>

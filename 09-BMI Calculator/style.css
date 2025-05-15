@@ -1,0 +1,36 @@
+body {
+    font-family: "Arial", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.calculator-container {
+    text-align: center;
+}
+
+form {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+label,
+input,
+button {
+    display: block;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#result {
+    margin-top: 20px;
+}

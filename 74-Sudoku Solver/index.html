@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                background-color: #f8f8f8;
+                font-family: "Arial", sans-serif;
+            }
+
+            #sudoku-board {
+                display: grid;
+                grid-template-columns: repeat(9, 40px);
+                gap: 1px;
+                background-color: #333;
+                border: 1px solid #000;
+            }
+
+            .cell {
+                width: 40px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 16px;
+                font-weight: bold;
+                color: #000;
+                border: 1px solid #000;
+            }
+
+            .given {
+                background-color: #ddd;
+            }
+
+            button {
+                margin-top: 20px;
+                padding: 10px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+        </style>
+        <title>Sudoku Solver</title>
+    </head>
+    <body>
+        <div id="sudoku-board"></div>
+        <button onclick="solveSudoku()">Solve Sudoku</button>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const board = document.getElementById("sudoku-board");
+                const cells = [];
+
+                // Initialize the Sudoku board
+                for (let i = 0; i < 9; i++) {
+                    for (let j = 0; j < 9; j++) {
+                        const cell = document.createElement("div");
+                        cell.classList.add("cell");
+                        cells.push(cell);
+                        board.appendChild(cell);
+                    }
+                }
+
+                // Set initial Sudoku values (0 for empty cells)
+                const initialBoard = [
+                    [5, 3, 0, 0, 7, 0, 0, 0, 0],
+                    [6, 0, 0, 1, 9, 5, 0, 0, 0],
+                    [0, 9, 8, 0, 0, 0, 0, 6, 0],
+                    [8, 0, 0, 0, 6, 0, 0, 0, 3],
+                    [4, 0, 0, 8, 0, 3, 0, 0, 1],
+                    [7, 0, 0, 0, 2, 0, 0, 0, 6],
+                    [0, 6, 0, 0, 0, 0, 2, 8, 0],
+                    [0, 0, 0, 4, 1, 9, 0, 0, 5],
+                    [0, 0, 0, 0, 8, 0, 0, 7, 9],
+                ];
+
+                // Fill initial values on the board
+                initialBoard.forEach((row, rowIndex) => {
+                    row.forEach((value, colIndex) => {
+                        const cellIndex = rowIndex * 9 + colIndex;
+                        cells[cellIndex].textContent = value !== 0 ? value : "";
+                        if (value !== 0) {
+                            cells[cellIndex].classList.add("given");
+                        }
+                    });
+                });
+            });
+
+            function solveSudoku() {
+                const board = [];
+                const cells = document.querySelectorAll(".cell");
+
+                // Populate the board with the current values
+                cells.forEach((cell, index) => {
+                    const value = cell.textContent.trim();
+                    board.push(value !== "" ? parseInt(value) : 0);
+                });
+
+                // Call the solving function
+                if (sudokuSolver(board)) {
+                    // Update the UI with the solved values
+                    cells.forEach((cell, index) => {
+                        cell.textContent = board[index];
+                        cell.classList.remove("given");
+                    });
+                } else {
+                    alert("The provided Sudoku puzzle is not solvable.");
+                }
+            }
+
+            function sudokuSolver(board) {
+                const emptyCell = findEmptyCell(board);
+
+                if (!emptyCell) {
+                    // No empty cells, puzzle is solved
+                    return true;
+                }
+
+                const [row, col] = emptyCell;
+
+                for (let num = 1; num <= 9; num++) {
+                    if (isValidMove(board, row, col, num)) {
+                        // Try placing the number
+                        board[row * 9 + col] = num;
+
+                        // Recursively attempt to solve the puzzle
+                        if (sudokuSolver(board)) {
+                            return true;
+                        }
+
+                        // If placing the number didn't lead to a solution, backtrack
+                        board[row * 9 + col] = 0;
+                    }
+                }
+
+                // No valid numbers for this cell, trigger backtracking
+                return false;
+            }
+
+            function isValidMove(board, row, col, num) {
+                // Check if the number is not present in the same row, column, or 3x3 grid
+                return (
+                    !usedInRow(board, row, num) &&
+                    !usedInColumn(board, col, num) &&
+                    !usedInGrid(board, row - (row % 3), col - (col % 3), num)
+                );
+            }
+
+            function usedInRow(board, row, num) {
+                return board.slice(row * 9, row * 9 + 9).includes(num);
+            }
+
+            function usedInColumn(board, col, num) {
+                for (let i = 0; i < 9; i++) {
+                    if (board[i * 9 + col] === num) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+
+            function usedInGrid(board, startRow, startCol, num) {
+                for (let i = 0; i < 3; i++) {
+                    for (let j = 0; j < 3; j++) {
+                        if (board[(startRow + i) * 9 + startCol + j] === num) {
+                            return true;
+                        }
+                    }
+                }
+                return false;
+            }
+
+            function findEmptyCell(board) {
+                for (let i = 0; i < 9; i++) {
+                    for (let j = 0; j < 9; j++) {
+                        if (board[i * 9 + j] === 0) {
+                            return [i, j];
+                        }
+                    }
+                }
+                return null;
+            }
+        </script>
+    </body>
+</html>

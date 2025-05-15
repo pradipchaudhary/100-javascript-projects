@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Clipboard Manager || 100 JavaScript Projects</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Clipboard Manager</h1>
+            <textarea
+                id="clipboardInput"
+                placeholder="Paste your text here"
+            ></textarea>
+            <button onclick="copyToClipboard()">Copy to Clipboard</button>
+            <button onclick="clearClipboard()">Clear Clipboard</button>
+            <div id="clipboardHistory"></div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

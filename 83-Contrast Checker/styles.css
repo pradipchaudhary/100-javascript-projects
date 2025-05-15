@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#app {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.colorInput {
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+#result {
+    margin-top: 20px;
+}
+
+.pass {
+    color: #4caf50;
+}
+
+.fail {
+    color: #ff5733;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <title>Polls and Survey Visualization || 100 JavaScript Projects</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Polls and Survey Visualization</h1>
+            <div id="survey-form">
+                <label for="question">Survey Question:</label>
+                <input
+                    type="text"
+                    id="question"
+                    placeholder="Enter your question"
+                />
+                <button onclick="addOption()">Add Option</button>
+                <ul id="options-list"></ul>
+                <button onclick="submitSurvey()">Submit Survey</button>
+            </div>
+            <canvas id="chart" width="800" height="400"></canvas>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>

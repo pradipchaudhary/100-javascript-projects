@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: "Arial", sans-serif;
+}
+
+#puzzle-container {
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(10, 30px);
+    gap: 2px;
+    margin-top: 20px;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#word-input {
+    margin-top: 20px;
+}
+
+#word-input label {
+    margin-right: 10px;
+}
+
+#message {
+    margin-top: 20px;
+    color: green;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+#reset-button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}

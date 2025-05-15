@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: "Arial", sans-serif;
+}
+
+#hangman-container {
+    text-align: center;
+}
+
+#word-container {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+#image-container {
+    margin: 20px 0;
+}
+
+#hangman-image {
+    max-width: 100%;
+    height: auto;
+}
+
+#letters-container {
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}

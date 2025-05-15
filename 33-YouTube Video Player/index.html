@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>YouTube Video Player || 100 JavaScript Projects</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                text-align: center;
+            }
+
+            #player {
+                width: 640px;
+                height: 360px;
+                margin: 20px auto;
+            }
+
+            #videoIdInput {
+                width: 300px;
+                padding: 5px;
+                margin-bottom: 10px;
+            }
+
+            #loadVideoButton {
+                padding: 8px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>YouTube Video Player</h1>
+        <input
+            type="text"
+            id="videoIdInput"
+            placeholder="Enter YouTube Video ID"
+        />
+        <button id="loadVideoButton" onclick="loadVideo()">Load Video</button>
+        <div id="player"></div>
+
+        <script>
+            // Replace 'YOUR_API_KEY' with your actual YouTube API key
+            const apiKey = "YOUR_API_KEY";
+
+            // Load the YouTube API script asynchronously
+            const script = document.createElement("script");
+            script.src = "https://www.youtube.com/iframe_api";
+            document.head.appendChild(script);
+
+            // Callback function to initialize the YouTube Player
+            function onYouTubeIframeAPIReady() {
+                player = new YT.Player("player", {
+                    height: "360",
+                    width: "640",
+                    playerVars: {
+                        autoplay: 0,
+                        controls: 1,
+                        rel: 0,
+                    },
+                });
+            }
+
+            // Load video based on user input
+            function loadVideo() {
+                const videoIdInput =
+                    document.getElementById("videoIdInput").value;
+                if (videoIdInput.trim() !== "") {
+                    player.loadVideoById(videoIdInput);
+                }
+            }
+        </script>
+    </body>
+</html>
