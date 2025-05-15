@@ -1,0 +1,130 @@
+/* style.css */
+
+:root {
+  --primary-color: #4caf50;
+  --accent-color: #388e3c;
+  --background-color: #f4f6f8;
+  --text-color: #333;
+  --border-radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1rem;
+  color: #555;
+}
+
+main {
+  max-width: 800px;
+  min-width: 500px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--accent-color);
+}
+
+section h2 {
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+#taskList {
+  list-style: none;
+}
+
+#taskList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: var(--border-radius);
+  transition: background 0.3s;
+}
+
+#taskList li.completed {
+  text-decoration: line-through;
+  color: #999;
+  background: #e0e0e0;
+}
+
+#taskList li button {
+  background-color: #e53935;
+  padding: 5px 10px;
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+  margin-left: 10px;
+}
+
+#taskList li button:hover {
+  background-color: #c62828;
+}
+
+footer {
+  text-align: center;
+  margin-top: auto;
+  font-size: 0.9rem;
+  color: #777;
+  padding: 1rem 0;
+}
