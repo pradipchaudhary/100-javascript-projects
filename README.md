@@ -8,7 +8,7 @@
 
 # 🚀 100 JavaScript Projects for Beginners to Intermediate Developers
 
-Welcome to the **[100 JavaScript Projects](https://100jsproject.vercel.app/)** repository — your ultimate resource for mastering JavaScript through **hands-on, real-world projects**.
+Welcome to the **[100 JavaScript Projects](https://100-javascript-projects.vercel.app//)** repository — your ultimate resource for mastering JavaScript through **hands-on, real-world projects**.
 
 ![JavaScript Projects](./screenshot.png)
 
@@ -70,7 +70,7 @@ cd 01-To-Do\ List\ App
 Open index.html in your browser
 ```
 
-You can also explore and deploy the live version from the [official website](https://100jsproject.vercel.app/).
+You can also explore and deploy the live version from the [official website](https://100-javascript-projects.vercel.app//).
 
 ---
 
