@@ -61,25 +61,31 @@
                         />
                     </a>
                 </h1>
-                <nav>
-                    <ul>
+                <nav aria-label="Main navigation for JavaScript projects">
+                    <ul role="list" class="flex space-x-6 items-center">
                         <li>
-                            <a href="https://github.com/pradipchaudhary/100-javascript-projects" target="_blank"><i
-                                    class="ri-github-line"></i></a>
+                            <a href="https://github.com/pradipchaudhary/100-javascript-projects" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-300 hover:text-white transition-colors duration-200" aria-label="View 100 JavaScript Projects on GitHub">
+                                <i class="ri-github-line text-xl mr-1"></i>
+                                <span class="hidden md:inline">GitHub Repo</span> 
+                            </a>
                         </li>
                         <li>
-                            <a href="https://www.buymeacoffee.com/pradipchaudhary" target="_blank">
-                                <i class="ri-cup-line"></i>
+                            <a href="https://www.buymeacoffee.com/pradipchaudhary" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-300 hover:text-white transition-colors duration-200" aria-label="Support Pradip Chaudhary on Buy Me A Coffee">
+                                <i class="ri-cup-line text-xl mr-1"></i>
+                                <span class="hidden md:inline">Buy Me A Coffee</span>
                             </a>
                         </li>
                         <li>
                             <div class="repo">
                                 <iframe
                                     src="https://ghbtns.com/github-btn.html?user=pradipchaudhary&repo=100-javascript-projects&type=star&count=true&size=large"
-                                    frameborder="0" scrolling="0" width="160px" height="30px" style="
-                                            font-size: 14px;
-                                            font-weight: 500;
-                                        "></iframe>
+                                    frameborder="0"
+                                    scrolling="0"
+                                    width="160px"
+                                    height="30px"
+                                    title="GitHub Star Button for 100-javascript-projects"
+                                    style="font-size: 14px; font-weight: 500;"
+                                ></iframe>
                             </div>
                         </li>
                     </ul>
