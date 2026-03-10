@@ -1,7 +1,7 @@
 const buttonEl = document.querySelector("#button");
 const todoList = document.querySelector("#todo_list");
 
-function addTodo() {
+buttonEl.addEventListener("click",function(){
     const li = document.createElement("li");
     let inputValue = document.querySelector(".input").value;
     const t = document.createTextNode(inputValue);
@@ -15,6 +15,4 @@ function addTodo() {
     }
     console.log(inputValue);
     document.querySelector("input").value = "";
-}
-
-buttonEl.addEventListener("click", addTodo);
+});
