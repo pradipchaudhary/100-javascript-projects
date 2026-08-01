@@ -1,53 +1,187 @@
+/* =========================
+   Global Styles
+========================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
-    width: 100%;
-    height: 100vh;
-    background-color: #212121;
-    color: #efefef;
+    background: linear-gradient(135deg, #1f1f1f, #2d2d2d);
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: sans-serif;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 40px 20px;
 }
-h1.title {
+
+/* =========================
+   Todo Container
+========================= */
+
+#todo_app {
+    width: 100%;
+    max-width: 600px;
+    background: #2b2b2b;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #00d26a;
+}
+
+/* =========================
+   Input Section
+========================= */
+
+.todo {
+    display: flex;
+    gap: 10px;
+}
+
+.input {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #444;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input:focus {
+    border-color: #00d26a;
+    box-shadow: 0 0 8px rgba(0, 210, 106, 0.4);
+}
+
+/* =========================
+   Button
+========================= */
+
+button {
+    padding: 12px 20px;
+    background: #00b050;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #009944;
+}
+
+/* =========================
+   Counter
+========================= */
+
+.counter {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* =========================
+   Todo List
+========================= */
+
+#todo_list {
+    list-style: none;
     margin-top: 20px;
 }
 
-#todo_app {
-    margin-top: 15px;
-}
-#todo_app .todo .input {
-    padding: 10px 20px;
-    min-width: 400px;
-    font-size: 1rem;
-}
-#todo_app .todo .input:focus {
-    border: 2px solid #0e760e;
-    outline: none;
-}
-.todo button {
-    padding: 10px 20px;
-    border: 1px solid #0c620c;
-    font-size: 1rem;
-    background-color: #0c620c;
-    color: #efefef;
-    cursor: pointer;
-    animation: background-color 0.6s ease-in-out;
-}
-.todo button:hover {
-    background-color: #0e760e;
+#todo_list li {
+    background: #3b3b3b;
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: 0.3s;
 }
 
-ul#todo_list {
-    list-style: none;
-    margin: 15px 0;
+#todo_list li:hover {
+    background: #474747;
 }
 
-ul#todo_list li {
-    padding: 10px 0px;
-    border-bottom: 1px solid #2e2e2e;
+/* =========================
+   Buttons inside Todo
+========================= */
+
+.todo-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.complete-btn {
+    background: #28a745;
+}
+
+.complete-btn:hover {
+    background: #218838;
+}
+
+.edit-btn {
+    background: #ffc107;
+    color: black;
+}
+
+.edit-btn:hover {
+    background: #e0a800;
+}
+
+.delete-btn {
+    background: #dc3545;
+}
+
+.delete-btn:hover {
+    background: #c82333;
+}
+
+/* =========================
+   Completed Todo
+========================= */
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 600px) {
+
+    .todo {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    #todo_list li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .todo-buttons {
+        width: 100%;
+        justify-content: space-between;
+    }
 }
