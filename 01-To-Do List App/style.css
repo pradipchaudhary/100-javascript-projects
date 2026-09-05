@@ -16,6 +16,10 @@ body {
 h1.title {
     margin-top: 20px;
 }
+#count{
+    margin: 10px;
+    text-align: center;
+}
 
 #todo_app {
     margin-top: 15px;

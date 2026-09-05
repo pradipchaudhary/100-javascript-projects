@@ -10,7 +10,7 @@ function saveTodos() {
 }
 
 function updateCount() {
-    count.textContent = todos.length;
+    count.textContent = `Task count: ${todos.length}`;
 }
 
 function renderTodos() {
