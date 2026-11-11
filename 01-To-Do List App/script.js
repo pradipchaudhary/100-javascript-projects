@@ -10,7 +10,9 @@ function saveTodos() {
 }
 
 function updateCount() {
-    count.textContent = todos.length;
+    if (count) {
+        count.textContent = todos.length;
+    }
 }
 
 function renderTodos() {

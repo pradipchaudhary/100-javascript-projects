@@ -51,3 +51,14 @@ ul#todo_list li {
     padding: 10px 0px;
     border-bottom: 1px solid #2e2e2e;
 }
+
+.task-info {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+#count {
+    font-weight: bold;
+    color: #4ade80;
+}
